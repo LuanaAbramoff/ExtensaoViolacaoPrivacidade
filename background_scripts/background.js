@@ -121,6 +121,11 @@ browser.webRequest.onBeforeRequest.addListener(
     let requestUrl = details.url;
     let port = getPort(requestUrl);
 
+    if (tabId < 0){
+      console.log("Tab com ID inválida!");
+      return;
+    }
+
     if(port && port !== "80" && port !== "443")
     {
       if(!openPorts[tabId]) {
@@ -216,7 +221,7 @@ function getCookiesInfo(tabId) {
 browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === "getConnections" && sender.tab) {
     sendResponse({thirdPartyConnections: getThirdPartyConnections(sender.tab.id),   
-                  openPorts: openPorts(sender.tab.id),
+                  openPorts: getOpenPortsopenPorts(sender.tab.id),
                   potentialThreats: getPotentialThreats(sender.tab.id),
                   storageUsage: getStorageUsage(sender.tab.id),
                   cookiesInfo: getCookiesInfo(sender.tab.id),

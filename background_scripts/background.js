@@ -30,7 +30,7 @@ function checkPostFlooding(tabId) {
 
 async function updateCookies(tabId, url){
   try{
-    const allCookies = await browser.cookie.getAll({ url });
+    const allCookies = await browser.cookies.getAll({ url });
 
     let firstPartyCookies = { session: 0, persistent: 0 };
     let thirdPartyCookies = { session: 0, persistent: 0 };

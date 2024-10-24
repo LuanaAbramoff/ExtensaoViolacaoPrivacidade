@@ -6,6 +6,7 @@
     "webNavigation",
     "webRequest",
     "webRequestBlocking",
+    "cookie",
     "<all_urls>",
     "tabs",
     "storage"

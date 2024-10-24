@@ -3,6 +3,7 @@
   "name": "Monitoramento de Conexões e Armazenamento",
   "version": "1.0",
   "permissions": [
+    "webNavigation",
     "webRequest",
     "webRequestBlocking",
     "<all_urls>",

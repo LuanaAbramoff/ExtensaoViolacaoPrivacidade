@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Popup</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Relatório de Segurança</h1>
+    <div class="score-container">
+      <div class="score-bar" id="score-bar"></div>
+      <div class="score-display" id="score-display"></div>
+    </div>
+    <h2>Conexões de Terceiros</h2>
+    <ul id="connection-list"></ul>
+    <button id="expand-button" style="display: none;">Ver mais</button>
+    
+    <h2>Portas Abertas</h2>
+    <ul id="port-list"></ul>
+    
+    <h2>Uso de Armazenamento</h2>
+    <ul id="storage-list"></ul>
+    
+    <h2>Informações dos Cookies</h2>
+    <ul id="cookie-list"></ul>
+    
+    <h2>Fingerprinting de Canvas</h2>
+    <ul id="fingerprinting-list"></ul>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
